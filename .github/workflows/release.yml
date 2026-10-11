@@ -48,7 +48,8 @@ jobs:
         if: ${{ env.CARGO_TOKEN != '' }}
         env:
           CARGO_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
-        run: cargo publish --token "$CARGO_TOKEN"
+        run: |
+          cargo publish --token "$CARGO_TOKEN" || echo "Version already published on crates.io, skipping."
 
   publish-openvsx:
     name: Publish to Open VSX
