@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "switchx-pro"
+version = "1.0.0"
+authors = [
+  { name="isaim0011", email="i.s41m0011@gmail.com" },
+]
+description = "Universal AI Subscription Account Switcher & Quota Router for Claude Code, Antigravity, Cursor, and Copilot"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+switchx = "switchx.cli:main"
+switchx-pro = "switchx.cli:main"

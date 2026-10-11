@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+switchx/__init__.py
+switchx/cli.py
+switchx_pro.egg-info/PKG-INFO
+switchx_pro.egg-info/SOURCES.txt
+switchx_pro.egg-info/dependency_links.txt
+switchx_pro.egg-info/entry_points.txt
+switchx_pro.egg-info/top_level.txt

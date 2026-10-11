@@ -1,0 +1,3 @@
+[console_scripts]
+switchx = switchx.cli:main
+switchx-pro = switchx.cli:main

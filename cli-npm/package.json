@@ -1,0 +1,25 @@
+{
+  "name": "switchx-pro",
+  "version": "1.0.0",
+  "description": "Universal AI Subscription Account Switcher & Quota Router for Claude Code, Antigravity, Cursor, and Copilot",
+  "main": "index.js",
+  "bin": {
+    "switchx": "./bin/switchx.js",
+    "switchx-pro": "./bin/switchx.js"
+  },
+  "keywords": [
+    "antigravity",
+    "claude",
+    "claude-code",
+    "copilot",
+    "cursor",
+    "rate-limit",
+    "account-switcher"
+  ],
+  "author": "isaim0011",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/isaim0011/switchx.git"
+  }
+}

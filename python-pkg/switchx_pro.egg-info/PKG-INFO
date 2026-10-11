@@ -1,0 +1,93 @@
+Metadata-Version: 2.4
+Name: switchx-pro
+Version: 1.0.0
+Summary: Universal AI Subscription Account Switcher & Quota Router for Claude Code, Antigravity, Cursor, and Copilot
+Author-email: isaim0011 <i.s41m0011@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# SwitchX Pro ⚡
+> Universal AI Subscription Account Switcher & Rolling Quota Router for Claude Code, Google Antigravity, Cursor, and GitHub Copilot/Codex.
+
+[![License](https://img.shields.io/badge/license-MIT%20OR%20Apache--2.0-blue.svg)](LICENSE)
+[![Rust](https://img.shields.io/badge/rust-1.85%2B-orange.svg)](https://www.rust-lang.org)
+[![Open VSX](https://img.shields.io/badge/open--vsx-v1.0.0-purple.svg)](https://open-vsx.org)
+
+<p align="center">
+  <img src="site/public/app-icon.svg" width="128" height="128" alt="SwitchX Pro Logo" />
+</p>
+
+---
+
+## Why SwitchX?
+
+Existing account switchers (like `venomchampion/antigravity-account-switcher`) are locked into a single VS Code webview, crash during heavy polling, and only handle Google Antigravity.
+
+Developers pay for **Claude Pro/Team ($20/mo)**, **GitHub Copilot ($10-$20/mo)**, and **Google Antigravity/Gemini subscriptions**. When you hit rate limits, logging out and doing browser OAuth takes several minutes and disrupts your workflow.
+
+**SwitchX** is an ultra-fast, cross-platform engine written in **Rust** with native editor and CLI integration:
+- 🚀 **<10ms Instant Session Swapping** via DPAPI and atomic filesystem profiles.
+- ⏱️ **Dual Rolling Window Quota Engine**: Tracks the **5-Hour sprint window** and **7-Day marathon limit** with live second-by-second countdowns.
+- ⚡ **Auto-Failover (`auto-next`)**: Automatically detects exhausted capacity and routes your active session to the alt account with the highest quota.
+- 💻 **Cross-Tool Runner**: Run CLIs isolated with specific profiles: `switchx run claude work -- claude`.
+- 🎨 **Sleek Extension Webview**: Modern dark glassmorphism dashboard in the Activity Bar.
+
+---
+
+## Supported Developer Tools
+
+| Tool / CLI | Supported Auth Model | Auto-Failover |
+| :--- | :--- | :--- |
+| **Claude Code CLI (`claude`)** | Anthropic Web OAuth & Subscription Profiles | ✅ Yes |
+| **Google Antigravity Standalone IDE** | Google OAuth Sessions (`state.vscdb`) | ✅ Yes |
+| **Cursor & Windsurf IDE** | Cursor Machine & User Sessions | ✅ Yes |
+| **GitHub Copilot & Codex** | GitHub OAuth Multi-Tenant (`hosts.json`) | ✅ Yes |
+
+---
+
+## Installation
+
+### Via Cargo
+```bash
+cargo install switchx
+```
+
+### Via NPX
+```bash
+npx switchx status
+```
+
+### Via Open-VSX / VS Code
+Search for `SwitchX Pro` in Open VSX or install the `.vsix` package.
+
+---
+
+## CLI Usage
+
+```bash
+# Register subscription accounts
+switchx add claude work --email "work@corp.com"
+switchx add claude personal --email "me@gmail.com"
+switchx add antigravity primary --email "dev@gmail.com"
+
+# View status matrix and quota countdowns
+switchx status
+
+# Switch account manually
+switchx switch claude work
+
+# Auto-switch to the account with maximum quota
+switchx auto-next claude
+
+# Run Claude Code isolated with work profile
+switchx run claude work -- claude
+```
+
+---
+
+## License
+
+MIT OR Apache-2.0
