@@ -22,13 +22,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Health categorizer: `OPTIMAL`, `MODERATE`, `WARNING` ($\le 20\%$), `CRITICAL` ($\le 10\%$), and `THROTTLED`.
 - **Intelligent Auto-Failover (`auto-next`)**:
   - Evaluates remaining quotas across account pools and automatically hot-swaps to the account with the highest available capacity upon rate limits.
-- **Sleek VS Code & Open-VSX Extension**:
+- **Sleek VS Code & Open-VSX Extension (`switchx-pro`)**:
+  - Unified package naming as `switchx-pro` under the `isaim0011` publisher namespace.
   - Activity Bar view container with radial dark glassmorphism dashboard.
   - Dynamic visual progress bars, real-time health badges, and one-click failover.
   - Interactive multi-provider filtering tabs (`All Apps`, `Claude`, `Antigravity`, `Copilot`).
 - **Cloudflare Pages Static Site**:
   - Responsive landing page with dark design system, installation guides, and competitor comparison matrix.
+  - Configured automated deployment in GitHub Actions passing `CLOUDFLARE_ACCOUNT_ID` directly to Wrangler.
 - **Ecosystem Packaging**:
-  - `.vsix` extension package.
+  - `.vsix` extension package (`switchx-pro-1.0.0.vsix`).
   - Published to crates.io as `switchx`.
   - GitHub Actions automated multi-OS testing and deployment pipeline.

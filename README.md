@@ -50,7 +50,10 @@ npx switchx status
 ```
 
 ### Via Open-VSX / VS Code
-Search for `SwitchX Pro` in Open VSX or install the `.vsix` package.
+Search for `SwitchX Pro` (`switchx-pro` by `isaim0011`) in Open VSX or install the `.vsix` package:
+```bash
+code --install-extension switchx-pro-1.0.0.vsix
+```
 
 ---
 
