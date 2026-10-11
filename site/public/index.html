@@ -315,44 +315,75 @@
       </div>
     </div>
 
-    <div class="table-section" id="comparison">
-      <h2>SwitchX vs Legacy Switchers</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Feature</th>
-            <th>SwitchX Pro (Rust Core)</th>
-            <th>venomchampion / BoyGR</th>
-            <th>Manual Switching</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Supported Apps</strong></td>
-            <td>Claude Code, Antigravity, Cursor, Copilot</td>
-            <td>Antigravity only</td>
-            <td>Individual web logins</td>
-          </tr>
-          <tr>
-            <td><strong>Failover Speed</strong></td>
-            <td>&lt;10ms (Native compiled)</td>
-            <td>Slow Webview reloads</td>
-            <td>2-3 minutes (Browser OAuth)</td>
-          </tr>
-          <tr>
-            <td><strong>Rate Limit Countdown</strong></td>
-            <td>Live sliding window math</td>
-            <td>Approximate polling</td>
-            <td>None</td>
-          </tr>
-          <tr>
-            <td><strong>CLI Runner Isolation</strong></td>
-            <td>Yes (<code>switchx run claude</code>)</td>
-            <td>No</td>
-            <td>No</td>
-          </tr>
-        </tbody>
-      </table>
+    <!-- Interactive UI Video / Demo Simulation Preview -->
+    <section class="demo-section" style="margin-bottom: 70px;">
+      <div style="text-align: center; margin-bottom: 24px;">
+        <div class="pill-badge" style="margin-bottom: 12px;">🎥 Smooth Live Experience</div>
+        <h2 style="font-size: 28px; font-weight: 800;">Real-Time Quota & Auto-Failover in Action</h2>
+        <p style="color: var(--text-muted); font-size: 15px;">Watch how SwitchX instantly swaps active accounts and tracks 5-hour rolling windows with zero reload lag.</p>
+      </div>
+
+      <div style="background: rgba(15, 23, 42, 0.95); border: 1px solid var(--card-border); border-radius: 16px; padding: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); backdrop-filter: blur(16px); max-width: 860px; margin: 0 auto;">
+        <!-- Window Chrome -->
+        <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--card-border); padding-bottom: 14px; margin-bottom: 20px;">
+          <div style="display: flex; gap: 8px;">
+            <div style="width: 12px; height: 12px; border-radius: 50%; background: #f43f5e;"></div>
+            <div style="width: 12px; height: 12px; border-radius: 50%; background: #fbbf24;"></div>
+            <div style="width: 12px; height: 12px; border-radius: 50%; background: #34d399;"></div>
+          </div>
+          <span style="font-size: 12px; font-weight: 600; color: var(--text-muted); font-family: monospace;">switchx-pro-preview.webm</span>
+          <div style="font-size: 11px; padding: 2px 8px; border-radius: 4px; background: rgba(56, 189, 248, 0.15); color: var(--accent-blue); font-weight: 700;">60 FPS SMOOTH</div>
+        </div>
+
+        <!-- Animated Visual Terminal & Extension Matrix -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <!-- Left: CLI Runner -->
+          <div style="background: #090d16; border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 16px; font-family: monospace; font-size: 12px; line-height: 1.6;">
+            <div style="color: #64748b; margin-bottom: 6px;"># Shell session: auto-failover test</div>
+            <div style="color: #38bdf8;">$ switchx status</div>
+            <div style="color: #94a3b8; font-size: 11px; margin: 6px 0;">
+              • work (claude) <span style="color:#f43f5e; font-weight:bold;">[CRITICAL]</span> 95% used<br>
+              • personal (claude) <span style="color:#34d399; font-weight:bold;">[OPTIMAL]</span> 0% used
+            </div>
+            <div style="color: #38bdf8; margin-top: 8px;">$ switchx auto-next claude</div>
+            <div style="color: #fbbf24; font-weight: 600;">⚡ Swapped Claude Code to 'personal' (&lt;8ms)</div>
+            <div style="color: #34d399; margin-top: 4px;">✔ Session ready for immediate use.</div>
+          </div>
+
+          <!-- Right: Extension Live Card -->
+          <div style="background: rgba(22, 30, 49, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 10px; padding: 16px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span style="font-weight: 700; font-size: 13px;">personal (Claude Pro)</span>
+              <span style="font-size: 10px; background: rgba(52, 211, 153, 0.2); color: #34d399; padding: 2px 6px; border-radius: 4px; font-weight: 800;">ACTIVE</span>
+            </div>
+            <div style="font-size: 11px; color: #94a3b8; margin-bottom: 10px;">5-Hour Rolling Sprint: 100% capacity remaining</div>
+            <div style="height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden; margin-bottom: 12px;">
+              <div style="height: 100%; width: 100%; background: linear-gradient(90deg, #10b981, #34d399);"></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 11px; color: #64748b;">
+              <span>Reset: Full capacity</span>
+              <span style="color: #38bdf8; font-weight: 600;">Synced with Editor</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Changelog & Release Notes Section -->
+    <div class="table-section" style="margin-bottom: 60px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <h2 style="font-size: 22px; margin: 0;">Release History & Changelog</h2>
+        <span style="font-size: 12px; padding: 4px 10px; border-radius: 20px; background: rgba(56, 189, 248, 0.15); color: var(--accent-blue); font-weight: 700;">v1.0.0 Stable</span>
+      </div>
+      <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--card-border); border-radius: 10px; padding: 20px; font-size: 13.5px; line-height: 1.7;">
+        <p style="color: var(--accent-green); font-weight: 700; margin-bottom: 6px;">[v1.0.0] - Universal AI Subscription Engine</p>
+        <ul style="padding-left: 20px; color: var(--text-muted);">
+          <li><strong>Universal App Support</strong>: Hot-swaps Claude Code CLI, Google Antigravity, Cursor, and GitHub Copilot.</li>
+          <li><strong>Rolling Quota Math</strong>: Calculates exact countdowns for both 5-hour rolling windows and 7-day limits.</li>
+          <li><strong>Intelligent Auto-Failover</strong>: Detects 429 rate limits and routes to the healthiest account in &lt;10ms.</li>
+          <li><strong>Zero-Distraction UI</strong>: Activity Bar glassmorphism extension and dark theme landing site.</li>
+        </ul>
+      </div>
     </div>
 
     <footer>
