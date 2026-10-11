@@ -4,6 +4,11 @@
   "description": "Ultra-fast, sleek account switcher and rolling quota monitor for Antigravity, Cursor, Claude Code, and Copilot/Codex",
   "version": "1.0.0",
   "publisher": "switchx-labs",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/isaim0011/switchx.git"
+  },
   "engines": {
     "vscode": "^1.85.0"
   },
