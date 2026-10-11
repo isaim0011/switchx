@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b132b" />
+      <stop offset="50%" stop-color="#1c2541" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.1"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Base Rounded Container -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" stroke="rgba(255,255,255,0.12)" stroke-width="4"/>
+
+  <!-- Subtle Ambient Glow -->
+  <circle cx="256" cy="256" r="180" fill="url(#glowGrad)" filter="url(#neonGlow)"/>
+
+  <!-- Core Circuit / Orbit Path -->
+  <circle cx="256" cy="256" r="160" fill="none" stroke="rgba(56,189,248,0.18)" stroke-width="4" stroke-dasharray="8 8"/>
+  <circle cx="256" cy="256" r="110" fill="none" stroke="rgba(192,132,252,0.18)" stroke-width="3"/>
+
+  <!-- Dynamic S / X Switch Icon Shape -->
+  <g filter="url(#neonGlow)">
+    <!-- Path 1: Forward Switch Loop -->
+    <path d="M140 180 C 140 130, 220 110, 280 140 L 372 190 C 400 205, 410 240, 395 270 C 380 300, 340 310, 310 295 L 218 245 C 190 230, 140 220, 140 180 Z" 
+          fill="url(#accentGrad)" opacity="0.95"/>
+
+    <!-- Path 2: Return Fast Loop -->
+    <path d="M372 332 C 372 382, 292 402, 232 372 L 140 322 C 112 307, 102 272, 117 242 C 132 212, 172 202, 202 217 L 294 267 C 322 282, 372 292, 372 332 Z" 
+          fill="url(#accentGrad)" opacity="0.9"/>
+
+    <!-- Dynamic Speed Arrows -->
+    <polygon points="390,140 430,170 380,185" fill="#38bdf8"/>
+    <polygon points="122,372 82,342 132,327" fill="#c084fc"/>
+  </g>
+
+  <!-- Glowing Quota Nodes -->
+  <circle cx="256" cy="256" r="28" fill="#ffffff" filter="url(#neonGlow)"/>
+  <circle cx="256" cy="256" r="16" fill="#090d16"/>
+  <circle cx="256" cy="256" r="8" fill="#38bdf8"/>
+</svg>

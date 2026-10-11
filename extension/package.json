@@ -1,0 +1,71 @@
+{
+  "name": "switchx-pro",
+  "displayName": "SwitchX Pro - AI Subscription & Quota Hub",
+  "description": "Ultra-fast, sleek account switcher and rolling quota monitor for Antigravity, Cursor, Claude Code, and Copilot/Codex",
+  "version": "1.0.0",
+  "publisher": "switchx-labs",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Machine Learning",
+    "Programming Languages",
+    "Productivity"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "switchx-view-container",
+          "title": "SwitchX Pro",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "switchx-view-container": [
+        {
+          "type": "webview",
+          "id": "switchx.dashboardView",
+          "name": "Quota & Accounts Hub"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "switchx.openDashboard",
+        "title": "SwitchX: Open Quota & Accounts Hub",
+        "category": "SwitchX"
+      },
+      {
+        "command": "switchx.autoNext",
+        "title": "SwitchX: Auto-Switch to Best Available Quota",
+        "category": "SwitchX"
+      },
+      {
+        "command": "switchx.refresh",
+        "title": "SwitchX: Refresh Quotas",
+        "icon": "$(refresh)",
+        "category": "SwitchX"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "switchx.autoNext",
+          "when": "view == switchx.dashboardView",
+          "group": "navigation@1"
+        },
+        {
+          "command": "switchx.refresh",
+          "when": "view == switchx.dashboardView",
+          "group": "navigation@2"
+        }
+      ]
+    }
+  }
+}
