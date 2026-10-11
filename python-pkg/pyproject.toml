@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "switchx-pro"
-version = "1.0.0"
+version = "1.0.1"
 authors = [
   { name="isaim0011", email="i.s41m0011@gmail.com" },
 ]

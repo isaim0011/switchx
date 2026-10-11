@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: switchx-pro
-Version: 1.0.0
+Version: 1.0.1
 Summary: Universal AI Subscription Account Switcher & Quota Router for Claude Code, Antigravity, Cursor, and Copilot
 Author-email: isaim0011 <i.s41m0011@gmail.com>
 Classifier: Programming Language :: Python :: 3
@@ -17,7 +17,7 @@ Description-Content-Type: text/markdown
 [![Open VSX](https://img.shields.io/badge/open--vsx-v1.0.0-purple.svg)](https://open-vsx.org)
 
 <p align="center">
-  <img src="site/public/app-icon.svg" width="128" height="128" alt="SwitchX Pro Logo" />
+  <img src="https://raw.githubusercontent.com/isaim0011/switchx/main/site/public/app-icon.png" width="128" height="128" alt="SwitchX Pro Logo" />
 </p>
 
 ---

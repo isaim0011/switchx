@@ -1,10 +1,14 @@
 [package]
 name = "switchx"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
-description = "Universal, ultra-fast subscription account switcher and rolling quota router for Antigravity, Claude Code, and Copilot/Codex"
-authors = ["SwitchX Maintainers"]
+description = "Universal AI subscription account switcher and rolling quota router for Antigravity, Cursor, Claude Code, and Copilot"
+authors = ["isaim0011 <i.s41m0011@gmail.com>"]
 license = "MIT OR Apache-2.0"
+repository = "https://github.com/isaim0011/switchx"
+homepage = "https://github.com/isaim0011/switchx"
+documentation = "https://docs.rs/switchx"
+readme = "README.md"
 
 [dependencies]
 clap = { version = "4.5", features = ["derive", "cargo"] }

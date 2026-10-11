@@ -1,9 +1,10 @@
 {
-  "name": "switchx-pro",
-  "displayName": "SwitchX Pro - AI Subscription & Quota Hub",
-  "description": "Ultra-fast, sleek account switcher and rolling quota monitor for Antigravity, Cursor, Claude Code, and Copilot/Codex",
+  "name": "antigravity-account-switcher",
+  "displayName": "Antigravity & Universal AI Account Switcher",
+  "description": "Ultra-fast account switcher and rolling quota monitor for Antigravity, Cursor, Claude Code, and Copilot",
   "version": "1.0.0",
-  "publisher": "switchx-labs",
+  "publisher": "isaim0011",
+  "icon": "media/icon.png",
   "license": "MIT",
   "repository": {
     "type": "git",
