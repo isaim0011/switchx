@@ -6,7 +6,7 @@
 [![Open VSX](https://img.shields.io/badge/open--vsx-v1.0.0-purple.svg)](https://open-vsx.org)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/isaim0011/switchx/main/site/public/app-icon.png" width="128" height="128" alt="SwitchX Pro Logo" />
+  <img src="media/icon.png" width="128" height="128" alt="Antigravity Account Switcher Logo" />
 </p>
 
 ---
