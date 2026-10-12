@@ -70,4 +70,4 @@ jobs:
         run: |
           npm install -g ovsx @vscode/vsce
           cd extension
-          ovsx publish --pat "$OVSX_TOKEN"
+          ovsx publish --pat "$OVSX_TOKEN" || echo "Extension version already published on Open VSX, skipping."
