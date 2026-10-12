@@ -78,21 +78,19 @@ impl ProviderAdapter for AntigravityAdapter {
 
     fn activate_session(&self, _profile: &AccountProfile, vault_dir: &Path) -> Result<()> {
         let vault_db = vault_dir.join("state.vscdb");
-        if !vault_db.exists() {
-            return Err(anyhow::anyhow!("Vault session file {:?} does not exist", vault_db));
-        }
-
-        if let Some(target) = self.target_auth_path() {
-            if let Some(parent) = target.parent() {
-                std::fs::create_dir_all(parent)?;
+        if vault_db.exists() {
+            if let Some(target) = self.target_auth_path() {
+                if let Some(parent) = target.parent() {
+                    std::fs::create_dir_all(parent)?;
+                }
+                // Atomic copy
+                let tmp_target = target.with_extension("vscdb.tmp");
+                std::fs::copy(&vault_db, &tmp_target)?;
+                std::fs::rename(&tmp_target, &target).or_else(|_| {
+                    // Fallback for Windows if rename fails due to lock
+                    std::fs::copy(&vault_db, &target).map(|_| ())
+                })?;
             }
-            // Atomic copy
-            let tmp_target = target.with_extension("vscdb.tmp");
-            std::fs::copy(&vault_db, &tmp_target)?;
-            std::fs::rename(&tmp_target, &target).or_else(|_| {
-                // Fallback for Windows if rename fails due to lock
-                std::fs::copy(&vault_db, &target).map(|_| ())
-            })?;
         }
         Ok(())
     }

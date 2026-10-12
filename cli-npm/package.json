@@ -1,6 +1,6 @@
 {
   "name": "switchx-pro",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Universal AI Subscription Account Switcher & Quota Router for Claude Code, Antigravity, Cursor, and Copilot",
   "main": "index.js",
   "bin": {
